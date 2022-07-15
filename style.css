@@ -1,0 +1,494 @@
+:root {
+  --bgc: #fff;
+  --dark-text: #282a30;
+  --light-text: #f0f0f0;
+  --brand-color: #78d5c0;
+  --dark-grey: #767783;
+  --pitch-black: #000;
+  --stroke: #f0f0f0;
+  --hightlight: #78d5bf7c;
+}
+
+::selection {
+  background: var(--hightlight);
+}
+::-moz-selection {
+  background: var(--hightlight);
+}
+
+@font-face {
+  font-family: "sohne";
+  src: url(/static/test-soehne-halbfett.woff2);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "sohne";
+  src: url(/static/test-soehne-buch.woff2);
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "sohne";
+  color: var(--dark-text);
+  font-size: 1.6rem;
+  background-color: var(--dark-text);
+}
+
+/* TEXT STYLES */
+
+h1 {
+  font-size: 6vw;
+  line-height: 110%;
+  text-align: center;
+  font-weight: bold;
+}
+h2 {
+  font-size: 5.2vw;
+  line-height: 6.4vw;
+  text-align: center;
+  width: 80%;
+  letter-spacing: -0.1rem;
+}
+
+p {
+  font-family: "sohne";
+  font-weight: normal;
+
+  text-align: center;
+
+  font-size: 1.35vw;
+  line-height: 2.2vw;
+  max-width: 60ch;
+}
+
+a {
+  color: var(--brand-color);
+}
+
+.chip {
+  padding: 1.2rem 2.2rem;
+  background-color: var(--stroke);
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  letter-spacing: 0.1rem;
+  font-weight: normal;
+}
+.span--cta {
+  color: var(--brand-color);
+  text-decoration: underline;
+}
+
+.span--arrow {
+  font-family: "Inter", sans-serif;
+  color: red;
+}
+
+.green-text {
+  color: var(--brand-color);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw;
+}
+
+.block--hero {
+  height: 30vw;
+  gap: 2.4vw;
+}
+
+.hero-description a {
+  color: var(--dark-text);
+  position: relative;
+}
+
+.container {
+  height: auto;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 8rem;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bgc);
+  z-index: 999;
+}
+
+.header-sticky {
+  background-color: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  top: 0;
+}
+
+.sections-container {
+  width: 100%;
+}
+
+section {
+  background-color: var(--bgc);
+  width: 100%;
+  height: auto;
+  padding: 5.8vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--stroke);
+}
+
+.section--hero {
+  border: unset;
+}
+
+.section--dark {
+  background-color: var(--pitch-black);
+  color: var(--bgc);
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.section--dark::after {
+  content: "";
+  background: url("/images/bg-link.jpg") fixed no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
+  z-index: -1;
+  opacity: 0.16;
+  filter: blur(8px);
+}
+
+.menu {
+  display: flex;
+  gap: 2.4rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  list-style: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.btn-menu-mob {
+  display: none;
+  cursor: pointer;
+}
+
+.btn-menu-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: none; */
+}
+.mob-menu-icon-wrapper {
+  position: relative;
+  z-index: 1000;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.btn-header-cta {
+  height: 3.6rem;
+  padding: 0 1.2rem;
+  color: var(--bgc);
+  stroke: unset;
+  border: unset;
+  border-radius: 1.8rem;
+  background-color: var(--brand-color);
+}
+
+.btn-header-cta a {
+  font-size: 1.5rem;
+  color: var(--bgc);
+  text-decoration: none;
+}
+
+.video {
+  width: 100%;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+}
+
+.video-html {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.play-button {
+  height: 6.4vw;
+  width: 6.4vw;
+  top: 50%;
+  left: 50%;
+  background-color: var(--brand-color);
+  /* filter: opacity(95%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.6rem;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  position: absolute;
+  z-index: 900;
+}
+
+.play-button:hover {
+  background-color: var(--dark-text);
+}
+
+.play-icon {
+  transform: scale(0.64);
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.typed-cursor {
+  font-weight: normal;
+  color: var(--brand-color);
+}
+
+.typed {
+  /* background-color: #78d5bf1f; */
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.6vw;
+  background-color: var(--pitch-black);
+  padding: 8rem 0;
+}
+
+.footer_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  list-style: none;
+  color: var(--bgc);
+}
+
+.footer_links li a {
+  color: var(--bgc);
+  text-decoration: unset;
+}
+
+.footer_links li a:hover {
+  color: var(--bgc);
+  text-decoration: underline;
+}
+
+.footer_links--secondary li a {
+  color: var(--dark-grey);
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.menu--open {
+  right: 0 !important;
+  /* background-color: red !important; */
+}
+
+.overlay {
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 800;
+  transition: all 0.3s ease-out;
+}
+
+.overlay--open {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  display: block !important;
+}
+
+.btn--cta {
+  padding: 2rem 3.2rem;
+  font-size: 2vw;
+  color: var(--bgc);
+  background-color: var(--brand-color);
+  font-weight: bold;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 8vw;
+  }
+
+  h2 {
+    font-size: 6.4vw;
+  }
+
+  p {
+    font-size: 3.2vw;
+    line-height: 150%;
+    margin-top: 1.4rem;
+  }
+  .block--hero {
+    height: auto;
+  }
+
+  .wrapper {
+    width: 90%;
+    gap: 6.4vw;
+  }
+
+  .menu {
+    /* display: none; */
+    padding: 4rem 4rem;
+    position: fixed;
+    right: -100%;
+    top: 0px;
+    height: 100vh;
+    width: 85vw;
+    background-color: var(--bgc);
+    flex-direction: column;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+  }
+
+  .menu li {
+    font-size: 2rem;
+  }
+
+  .btn-menu-mob {
+    display: block;
+    z-index: 999;
+  }
+  header {
+    height: 6.4rem;
+    padding: 0 2rem;
+  }
+  .chip {
+    font-size: 2.2vw;
+  }
+  .footer_links {
+    font-size: 2rem;
+    margin-top: 2rem;
+    flex-direction: column;
+    /* gap: 2.4rem; */
+    width: 100%;
+  }
+  .footer_links li {
+    /* background-color: red; */
+    padding: 2.4rem 1.6rem;
+    border-bottom: 1px solid var(--dark-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer_links--primary,
+  .footer_links--secondary {
+    gap: 0;
+    margin: 0;
+  }
+  .footer_links--primary li,
+  .footer_links--secondary li {
+    width: 100%;
+  }
+
+  .footer-logo {
+    transform: scale(1.2);
+    margin-bottom: 4rem;
+  }
+
+  .section {
+    padding: 8vw 0;
+  }
+  footer {
+    gap: 0;
+  }
+  .btn--cta {
+    font-size: 1.6rem;
+  }
+  .play-button {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    width: 85%;
+    gap: 5.2vw;
+  }
+  .chip {
+    font-size: 1.2vw;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 70%;
+  }
+  .chip {
+    font-size: 0.8vw;
+  }
+}
