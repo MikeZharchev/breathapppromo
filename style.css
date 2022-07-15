@@ -218,6 +218,7 @@ section {
 .mob-menu-icon-wrapper {
   position: relative;
   z-index: 1000;
+  display: none;
 }
 .menu-item {
   display: flex;
@@ -469,6 +470,9 @@ footer {
   .play-button {
     width: 6.4rem;
     height: 6.4rem;
+  }
+  .mob-menu-icon-wrapper {
+    display: block;
   }
 }
 
