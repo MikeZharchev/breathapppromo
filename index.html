@@ -76,7 +76,7 @@
           <li class="menu-item">About us</li>
           <li class="menu-item">Pricing</li>
           <li class="menu-item">Blog</li>
-          <button class="btn-header-cta"><a href="#"> Try for free</a></button>
+          <button class="btn-header-cta" type="button" onclick="location.href='https://google.com';" value="Go to Google">Try for free</button>
         </ul>
         <div class="mob-menu-icon-wrapper">
 
@@ -120,13 +120,13 @@
                 <!-- <span class="span--cta"> <a href="#">Try for free.</a></span> -->
               </h1>
               <p class="hero-description">
-                <a href="#">See what you type</a> to stay in the flow.</a>
-                <a href="#">Link texts</a> to think better. <a href="#"><br>Autocomplete</a> words to write faster.<br>
+                <a class="anchor anchor--see-what-type" >See what you type</a> to stay in the flow.</a>
+                <a class="anchor anchor--think-clear"">Link texts</a> to think better. <a class="anchor anchor--autocomplete" ><br>Autocomplete</a> words to write faster.<br>
 
               </p>
             </div>
 
-            <div class="video-wrapper">
+            <div class="video-player">
               <video
                 class="video-html"
                 src="/video/overview.mp4"
@@ -157,7 +157,7 @@
 
           </div>
         </section>
-        <section class="section section--2">
+        <section class="section section--2" id="see-what-you-type">
           <div class="wrapper">
             <div class="block">
               <h2>See what you type.</h2>
@@ -172,7 +172,7 @@
           />
           </div>
         </section>
-        <section class="section section--3 section--dark">
+        <section class="section section--3 section--dark" id="think-clear">
           <div class="wrapper">
             <div class="block">
               <h2>Think clear.</h2>
@@ -194,7 +194,7 @@
           />
           </div>
         </section>
-        <section class="section section--4">
+        <section class="section section--4" id="autocomplete">
           <div class="wrapper">
             <div class="block">
               <h2>Write faster than ever.</h2>
@@ -297,6 +297,34 @@
           <li><a href="#">Terms of service</a></li>
         </ul>
       </footer>
+      <div class="video-overlay hidden">
+        <svg class="close-overlay-btn" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.9798 19.9977L10.4036 27.5738L12.4239 29.5941L20.0001 22.018L27.5762 29.5941L29.5965 27.5738L22.0204 19.9977L29.5965 12.4215L27.5762 10.4012L20.0001 17.9774L12.4239 10.4012L10.4036 12.4215L17.9798 19.9977Z" />
+          </svg>
+          
+          
+          
+                    <div
+              class="video video-scale"
+              style="padding: 56.25% 0 0 0; position: relative"
+            >
+              <iframe
+                src="https://player.vimeo.com/video/728199022?autoplay=0&loop=0&autopause=0&muted=1&h=944e3f78df&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                title="Breathtaking. Demo"
+              ></iframe>
+            </div>
+
+      </div>
       <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
   </body>
