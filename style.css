@@ -471,25 +471,32 @@ footer {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 8vw;
+    width: 100%;
+    font-size: 9vw;
     text-align: left;
   }
 
   h2 {
+    width: 100%;
     font-size: 8vw;
-    line-height: 150%;
+    line-height: 120%;
     text-align: left;
   }
 
   p {
     font-size: 4vw;
     line-height: 150%;
-    margin-top: 1.4rem;
+    margin-top: 0.8rem;
     text-align: left;
   }
+
   .block--hero {
     height: auto;
     justify-content: flex-start;
+  }
+
+  .chip {
+    align-self: flex-start;
   }
 
   .wrapper {
