@@ -472,19 +472,24 @@ footer {
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 8vw;
+    text-align: left;
   }
 
   h2 {
     font-size: 8vw;
+    line-height: 150%;
+    text-align: left;
   }
 
   p {
-    font-size: 3.2vw;
+    font-size: 4vw;
     line-height: 150%;
     margin-top: 1.4rem;
+    text-align: left;
   }
   .block--hero {
     height: auto;
+    justify-content: flex-start;
   }
 
   .wrapper {
