@@ -7,7 +7,7 @@
   --dark-grey: #767783;
   --pitch-black: #000;
   --stroke: #f0f0f0;
-  --hightlight: #78d5bf7c;
+  --hightlight: #78d5bf4f;
 }
 
 ::selection {
@@ -19,12 +19,12 @@
 
 @font-face {
   font-family: "sohne";
-  src: url(/static/test-soehne-halbfett.woff2);
+  src: url(/static/soehne-halbfett.woff2);
   font-weight: bold;
 }
 @font-face {
   font-family: "sohne";
-  src: url(/static/test-soehne-buch.woff2);
+  src: url(/static/soehne-buch.woff2);
   font-weight: normal;
 }
 
@@ -180,9 +180,9 @@ section {
   transform-style: preserve-3d;
 }
 
-.section--dark::after {
+/* .section--dark::after {
   content: "";
-  background: url("/images/bg-link.png") fixed no-repeat;
+  background: url("/img/bg-link.png") fixed no-repeat;
   background-size: cover;
   background-position: fixed;
   position: absolute;
@@ -194,7 +194,7 @@ section {
   z-index: -1;
   opacity: 0.16;
   filter: blur(20px);
-}
+} */
 
 .menu {
   display: flex;
@@ -380,8 +380,8 @@ footer {
 }
 
 .btn--cta {
-  padding: 2rem 3.2rem;
-  font-size: 2vw;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.6vw;
   color: var(--bgc);
   background-color: var(--brand-color);
   font-weight: bold;
@@ -390,6 +390,9 @@ footer {
   border: none;
   cursor: pointer;
   transition: all ease-in-out 0.3s;
+}
+.btn--cta:hover {
+  background-color: var(--brand-hover);
 }
 
 .video-overlay {
@@ -421,10 +424,49 @@ footer {
 }
 
 .anchor {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   cursor: pointer;
+  background-color: var(--hightlight);
 }
 
+.device-wrapper {
+  position: relative;
+}
+
+.mac-air {
+  z-index: 998;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.image-mac {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  transform: translate(-50%, -60%);
+  z-index: 1;
+}
+.link--hero {
+  text-decoration: underline;
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+.underlined {
+  text-decoration: underline;
+}
+.strikethrough {
+  text-decoration: line-through;
+  color: rgba(255, 38, 38, 0.2);
+  text-decoration-color: rgb(255, 38, 38);
+}
+
+/*///////////// MEDIA QUERIES ////////////*/
+/*///////////// MEDIA QUERIES ////////////*/
+/*///////////// MEDIA QUERIES ////////////*/
+/*///////////// MEDIA QUERIES ////////////*/
 /*///////////// MEDIA QUERIES ////////////*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -447,7 +489,7 @@ footer {
 
   .wrapper {
     width: 90%;
-    gap: 6.4vw;
+    gap: 5.6vw;
   }
 
   .menu {
@@ -479,6 +521,7 @@ footer {
   .chip {
     font-size: 2.2vw;
   }
+
   .footer_links {
     font-size: 2rem;
     margin-top: 2rem;
@@ -517,7 +560,7 @@ footer {
     gap: 0;
   }
   .btn--cta {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   .play-button {
     width: 6.4rem;
@@ -543,6 +586,7 @@ footer {
 @media only screen and (min-width: 768px) {
   .wrapper {
     width: 70%;
+    gap: 4vw;
   }
   .chip {
     font-size: 0.8vw;

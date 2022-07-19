@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^7.0.0",
     "typed.js": "^2.0.12"
   }
 }
