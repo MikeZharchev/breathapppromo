@@ -407,6 +407,8 @@ footer {
   top: 0;
   z-index: 2000;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
   transition: all 0.2s ease-out;
 }
 
@@ -572,7 +574,8 @@ footer {
     gap: 0;
   }
   .btn--cta {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    /* width: 100%; */
   }
   .play-button {
     width: 6.4rem;
